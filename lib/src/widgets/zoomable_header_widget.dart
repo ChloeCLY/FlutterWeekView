@@ -178,7 +178,7 @@ abstract class ZoomableHeadersWidgetState<W extends ZoomableHeadersWidget>
   void scheduleScrollToInitialTime() {
     if (shouldScrollToInitialTime) {
       WidgetsBinding.instance
-          ?.addPostFrameCallback((_) => scrollToInitialTime());
+          .addPostFrameCallback((_) => scrollToInitialTime());
     }
   }
 

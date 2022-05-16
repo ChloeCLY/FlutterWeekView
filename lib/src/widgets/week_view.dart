@@ -349,7 +349,7 @@ class _WeekViewState extends ZoomableHeadersWidgetState<WeekView> {
       return;
     }
 
-    WidgetsBinding.instance?.addPostFrameCallback((_) {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
       final double? widgetWidth =
           (context.findRenderObject() as RenderBox?)?.size.width;
       if (widgetWidth == null) {
@@ -405,7 +405,7 @@ class _AutoScrollDayBarState extends State<_AutoScrollDayBar> {
     widget.stateScrollController.addListener(updateScrollPosition);
 
     WidgetsBinding.instance
-        ?.scheduleFrameCallback((_) => updateScrollPosition());
+        .scheduleFrameCallback((_) => updateScrollPosition());
   }
 
   @override
